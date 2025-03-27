@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind css vite</title>
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <body>
+    <div class="custom-container">
+      <header class="mb-20 max-md:mb-5 sticky top-0 scale-z-9">
+        <nav>
+          <div class="flex items-center justify-between py-5 mb-15">
+            <a href="./index.html"
+              ><img src="./img /Logo star.png" alt="logo"
+            /></a>
+
+             <!-- laptop  -->
+            <ul class="flex gap-7 max-md:hidden">
+              <li>
+                <a
+                  class="font-bold text-primary text-lg hover:text-primary hover:scale-105 cursor-pointer duration-300"
+                  href="./index.html"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  class="font-bold cursor-pointer hover:scale-105 text-lg hover:text-primary duration-300"
+                  href="./works.html"
+                  >Works</a
+                >
+              </li>
+              <li>
+                <a
+                  class="font-bold hover:scale-105 cursor-pointer text-lg hover:text-primary duration-300"
+                  href="./about.html"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  class="font-bold hover:scale-105 cursor-pointer text-lg hover:text-primary duration-300"
+                  href="./contact.html"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+
+            <!-- mobile  -->
+             <input type="checkbox" id="menu-toggle" class="hidden peer ">
+             <label for="menu-toggle" class="hidden border  rounded-full size-10 max-md:flex justify-center items-center cursor-pointer">
+             <svg
+             xmlns="http://www.w3.org/2000/svg"
+             width="20"
+             height="20"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             class="lucide lucide-menu"
+           >
+             <line x1="4" x2="20" y1="12" y2="12" />
+             <line x1="4" x2="20" y1="6" y2="6" />
+             <line x1="4" x2="20" y1="18" y2="18" />
+           </svg>
+          </label>
+
+          <!-- mobile sidebar -->
+           <div class="fixed inset-y-0 left-0 w-64 bg-white  shadow-lg transform -translate-x-full peer-checked:translate-x-0 transition-transform duration-300 ease-in-out max-md:block hidden z-10">
+            <ul class="p-4 space-y-4">
+              <li>
+                <a class="p-2" href="./index.html">
+                  <img src="./img /Logo star.png" alt="" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./index.html"
+                  class="block p-2 hover:bg-gray-200 bg-gray-200"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="./works.html" class="block p-2 hover:bg-gray-200"
+                  >Works</a
+                >
+              </li>
+              <li>
+                <a href="./about.html" class="block p-2 hover:bg-gray-200"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a href="./contact.html" class="block p-2 hover:bg-gray-200"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+
+           </div>
+
+
+
+
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <!-- about  -->
+        <section>
+          <div class="flex flex-col gap-5 items-start">
+            <img
+              class="size-[140px] rounded-full object-cover max-sm:size-[70px]"
+              src="./img /photologo.jpeg"
+              alt="profile"
+            />
+            <p
+              class="font-medium text-3xl max-sm:text-lg text-neutral-400 max-w-[900px]"
+            >
+              Hey there! I'm a product designer
+              <span class="text-primary"
+                >shaping ideas into sleek, functional designs</span
+              >—working remotely from Bangkok and loving it. Let's build
+              something great!
+            </p>
+            <button class="primary-btn rounded-full flex gap-2">
+              Get In Touch<svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-circle-arrow-right"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M8 12h8" />
+                <path d="m12 16 4-4-4-4" />
+              </svg>
+            </button>
+          </div>
+        </section>
+        <hr class="my-20 max-sm:my-10 border-b border-neutral-200" />
+        <!-- select words section  -->
+        <section>
+          <div class="flex justify-between items-center mb-10">
+            <div class="flex items-center gap-3">
+              <div class="bg-neutral-700 w-[20px] h-[3px]"></div>
+              <p class="text-2xl font-medium max-sm:text-base text-neutral-700">
+                Selected Works
+              </p>
+            </div>
+
+            <button class="primary-outlinebtn rounded-full flex gap-2">
+              View More<svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-circle-arrow-right"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M8 12h8" />
+                <path d="m12 16 4-4-4-4" />
+              </svg>
+            </button>
+          </div>
+          <!-- card section  -->
+
+          <div class="grid grid-cols-3 gap-5 max-sm:grid-cols-1">
+            <div>
+              <img
+                class="mb-3 object-cover rounded-xl"
+                src="./img /image1.png"
+                alt="img1"
+              />
+              <p class="font-semibold text-neutral-900 m-1">FreshCart UI</p>
+              <p class="text-sm text-neutral-500">
+                FreshCart (Grocery Delivery)
+              </p>
+            </div>
+
+            <div>
+              <img
+                class="mb-3 object-cover rounded-xl"
+                src="./img /image2.png"
+                alt="img1"
+              />
+              <p class="font-semibold text-neutral-900 m-1">BloomBank App</p>
+              <p class="text-sm text-neutral-500">
+                BloomBank (Digital Banking)
+              </p>
+            </div>
+
+            <div>
+              <img
+                class="mb-3 object-cover rounded-xl"
+                src="./img /image3.png"
+                alt="img1"
+              />
+              <p class="font-semibold text-neutral-900 m-1">
+                NutriTrack Dashboard
+              </p>
+              <p class="text-sm text-neutral-500">
+                NutriTrack (Health & Nutrition Analytics)
+              </p>
+            </div>
+          </div>
+        </section>
+        <hr class="my-20 max-sm:my-10 border-b border-neutral-200" />
+
+        <!-- who am i section  -->
+
+        <div class="flex justify-between max-md:flex-col gap-5 items-start">
+          <div class="flex items-center gap-3">
+            <div class="bg-neutral-700 w-[20px] h-[3px]"></div>
+            <p class="text-2xl font-medium max-sm:text-base text-neutral-700">
+              Who am I?
+            </p>
+          </div>
+
+          <div>
+            <p
+              class="max-w-[644px] max-sm:text-lg text-2xl text-neutral-500 items-start mb-6"
+            >
+              Hey, I'm a product designer based in Bangkok, working remotely.
+              <span class="text-primary">
+                I craft intuitive, aesthetically pleasing products that blend
+                form and function.</span
+              >
+              Always iterating, always creating—let's design something
+              impactful!
+            </p>
+            <button class="primary-outlinebtn rounded-full flex gap-2">
+              Get to know me more<svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-circle-arrow-right"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M8 12h8" />
+                <path d="m12 16 4-4-4-4" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <hr class="my-20 max-sm:my-10 border-b border-neutral-200" />
+
+        <!-- contact me section  -->
+
+        <div
+          class="flex justify-between max-md:flex-col gap-5 items-start mb-20"
+        >
+          <div class="flex items-center gap-3">
+            <div class="bg-neutral-700 w-[20px] h-[3px]"></div>
+            <p class="text-2xl font-medium max-sm:text-base text-neutral-700">
+              Contact Me
+            </p>
+          </div>
+
+          <form class="w-xl max-md:w-full flex flex-col gap-5">
+            <h1 class="text-2xl max-sm:text-lg text-neutral-700">
+              Send a message
+            </h1>
+            <input class="input" type="text" placeholder="Name" />
+            <input class="input" type="email" placeholder="Email" />
+            <textarea
+              class="input"
+              rows="8"
+              name=""
+              id=""
+              placeholder="Message"
+            ></textarea>
+            <button class="primary-btn rounded-md flex justify-center gap-2">
+              Send<svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-send-horizontal"
+              >
+                <path
+                  d="M3.714 3.048a.498.498 0 0 0-.683.627l2.843 7.627a2 2 0 0 1 0 1.396l-2.842 7.627a.498.498 0 0 0 .682.627l18-8.5a.5.5 0 0 0 0-.904z"
+                />
+                <path d="M6 12h16" />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </main>
+    </div>
+
+    <footer>
+      <div class="bg-neutral-50 px-20 py-10">
+        <div
+          class="custom-container max-md:flex-col max-md:gap-10 flex justify-between items-start"
+        >
+          <div class="flex flex-col items-start gap-5">
+            <img src="./img /Logo star.png" alt="logo" />
+
+            <div class="flex flex-col items-start gap-4">
+              <p class="text-neutral-500 text-sm">Contact</p>
+              <p class="text-sm">mms-it.com</p>
+              <p class="text-sm">+959250152018</p>
+            </div>
+          </div>
+
+          <div class="flex max-md:flex-col gap-20">
+            <div class="flex flex-col gap-4">
+              <p class="text-neutral-500 text-sm">Pages</p>
+              <p class="text-sm">Home</p>
+              <p class="text-sm">Works</p>
+              <p class="text-sm">About</p>
+              <p class="text-sm">Contact</p>
+            </div>
+            <div class="flex flex-col gap-4">
+              <p class="text-neutral-500 text-sm">Social</p>
+              <p class="text-sm">Instagram</p>
+              <p class="text-sm">Dribble</p>
+              <p class="text-sm">Behance</p>
+              <p class="text-sm">Linkedin</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
